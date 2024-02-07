@@ -1,0 +1,851 @@
+:root {
+  --swiper-navigation-size: 25px;
+  --bs-primary-rgb: rgb(156, 129, 79);
+}
+
+body {
+  font-family: 'Lora';
+  text-transform: capitalize;
+  background: #FBF6E8;
+  /* overflow-x: hidden; */
+}
+
+::selection{
+  background-color: var(--bs-primary-rgb);
+  color: #fff;
+}
+
+* {
+  background-attachment: fixed;
+}
+
+[data-aos] {
+  transition-duration: 1s !important;
+}
+
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  color: #3D3931;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+}
+
+.bg-pro {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn1 {
+  background-color: var(--bs-primary-rgb);
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.68px;
+  padding: 12px 24px;
+}
+
+
+
+/* Title CSS  */
+
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.title h3 {
+  color: #876E40;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+}
+
+.title h2 {
+  color: #000;
+  font-family: 'Forum';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.title p {
+  color: #3D3931;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Header satrt  */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.60);
+  backdrop-filter: blur(3px);
+  padding: 20px 0;
+  z-index: 1000;
+}
+.fixed-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header a {
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 20px;
+}
+
+a.active {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+a.active::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Offcanvas css */
+
+.offcanvas {
+  padding: 30px;
+}
+
+.offcanvas a {
+  color: #292929;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.offcanvas a.active::after {
+  background-color: #292929;
+  bottom: -5px;
+}
+
+/* Banner start  */
+
+.banner {
+  padding: 210px 0px 100px 0px;
+}
+
+
+.banner-bg [data-aos] {
+  transition-duration: 4s !important;
+}
+
+.banner-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner h2 {
+  letter-spacing: 8.4px;
+}
+
+/* luxury-hotels css  */
+
+.luxury-hotels {
+  position: relative;
+}
+
+.luxury-hotels::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/pattern1.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.luxury-hotels .box {
+  position: relative;
+  z-index: 1;
+}
+
+.luxury-hotels .box:hover .img img,
+.blog .box:hover .image img {
+  scale: 1.1;
+}
+
+.luxury-hotels .img img,
+.blog .image img {
+  transition: all .3s;
+}
+
+
+
+.luxury-hotels .icons {
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  column-gap: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, #000 100%);
+  padding: 20px;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  align-items: baseline;
+  transition: all .5s ease;
+}
+
+.luxury-hotels .box:hover .icons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.luxury-hotels .btn1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  font-weight: 500;
+}
+
+.luxury-hotels .boxes .title h2 {
+  color: #3D3931;
+  font-family: 'Forum';
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 4.2px;
+}
+
+
+.luxury-hotels .boxes .title {
+  text-align: left;
+  padding: 15px 0;
+  row-gap: 0px;
+}
+
+/* amenities css  */
+
+.amenities {
+  padding: 100px 0;
+}
+
+.amenities .box h3 {
+  color: #000;
+  font-family: 'Forum';
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 4.2px;
+  margin-bottom: 15px;
+}
+
+.amenities .box h4 {
+  color: #3D3931;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.26px;
+}
+
+.amenities .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.amenities .box .content {
+  padding: 0 0px 0 20px;
+}
+
+.amenities .box:hover span{
+  color: rgba(155, 128, 78, 1);
+}
+
+.amenities .box span {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(155, 128, 78, 0.25);
+  font-family: 'Forum';
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+  transition: all 1s;
+}
+
+/* about css */
+
+.about {
+  position: relative;
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/pattern2.png);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+.about .title h2 {
+  font-size: 25px;
+}
+
+.about .title p {
+  font-size: 15px;
+  line-height: normal;
+}
+
+.about .facts {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.about .facts h3 {
+  color: #9B804E;
+  font-family: 'Forum';
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 3.2px;
+  line-height: 1;
+}
+
+.about .content {
+  display: flex;
+  align-items: center;
+}
+
+/* facilities css  */
+
+.facilities .box {
+  position: relative;
+}
+
+.facilities img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.facilities .box:hover .content p {
+  visibility: visible;
+  opacity: 1;
+  ;
+}
+
+.facilities .title {
+  padding: 80px 0;
+  background: #3D3931;
+}
+
+.facilities .content {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  letter-spacing: 2px;
+}
+
+.facilities .content p {
+  transition: all .5s ease;
+  font-size: 15px;
+}
+
+.facilities h3,
+.facilities h2,
+.facilities p {
+  color: #fff !important;
+  font-weight: 400 !important;
+}
+
+/* testimonial css */
+
+.testimonial {
+  padding: 100px 0;
+}
+
+.testimonial .title {
+  margin-bottom: 20px;
+}
+
+.testimonial .content h5 {
+  font-size: 16px;
+}
+
+.testimonial .content h6 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.testimonial .content p {
+  margin: 20px 0 30px 0;
+  font-size: 14px;
+}
+
+.testimonial .swiper-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.testimonial .swiper-pagination::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: '';
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+  background: rgba(104, 69, 21, 0.30);
+}
+
+.testimonial .swiper-pagination .swiper-pagination-bullet {
+  background: #CDC3B4;
+  opacity: 1;
+  margin: 0;
+}
+
+.testimonial .swiper-pagination .swiper-pagination-bullet-active {
+  background: #684515;
+}
+
+.testimonial .swiper-button-prev,
+.testimonial .swiper-button-next {
+  position: unset;
+  margin: 0;
+  padding: 22px 73px;
+  user-select: none;
+  font-size: 15px;
+}
+
+.testimonial .swiper-button-prev::after,
+.testimonial .swiper-button-next::after {
+  content: '';
+}
+
+/* blog css  */
+
+.blog .title h2 {
+  font-size: 30px;
+}
+
+/* Footer CSS */
+
+footer {
+  background-image: url(../images/footer-bg.png);
+}
+
+footer a,
+footer p {
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.72px;
+}
+
+footer .icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .title {
+  text-align: left;
+  color: #fff;
+  font-family: 'Forum';
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.f-bottom .devider {
+  width: 1px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.20);
+  margin: 0 15px;
+}
+
+.f-bottom {
+  background-color: rgba(255, 255, 255, .4);
+  padding: 10px 0;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h4 {
+  font-size: 18px !important;
+  color: #9B804E;
+}
+
+.best-emi-rightbox h3 {
+  color: #000;
+  font-family: 'Forum';
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 4.2px;
+  margin-bottom: 6px;
+}
+
+.best-emi-rightbox h4 {
+  color: #3D3931;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.26px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.best-emi-rightbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.best-emi {
+  padding: 100px 0;
+}
+
+.best-emi-rightbox .image img {
+  width: 80%;
+}
+
+.best_emi-right .row {
+  row-gap: 40px;
+}
+
+.best-emi-left p {
+  color: #876E40;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.best-emi-left h4 {
+  font-size: 32px;
+  line-height: 1.5;
+  margin: 20px 0 30px 0;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.best-emi-left h4 span {
+  color: #9B804E;
+}
+
+.hotels-gallry {
+  padding: 100px 0;
+}
+
+.galry-img {
+  padding-top: 90%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.galry-img:hover img{
+  scale: 1.1;
+}
+
+.galry-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s ease;
+}
+
+.galry-img h4 {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  left: 15px;
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: .3s ease-in-out;
+}
+
+.gallry-arrow {
+  width: fit-content;
+  position: relative !important;
+  z-index: 999;
+  margin-bottom: 18px;
+  margin-left: 18px;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+.galry-img:hover .gallry-arrow {
+  opacity: 1;
+}
+
+.galry-img:hover h4 {
+  margin-bottom: 50px !important;
+}
+
+.hotels-gallry .row {
+  row-gap: 25px;
+}
+
+/* Contact US css vinit  */
+
+.contact-banner {
+  background-image: url(../images/contact-banner.png);
+}
+
+
+.contact-content {
+  background-color: rgba(156, 129, 79, .1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-wrapper {
+  border: 1px solid #9B804E;
+  padding: 20px;
+  display: flex;
+}
+
+.contact {
+  padding: 100px 0;
+}
+
+.contact-content a {
+  color: #000;
+  font-size: 14px;
+}
+
+.contact .title h2 {
+  font-size: 40px;
+}
+
+form input {
+  background-color: transparent !important;
+  border: 1px solid #9B804E !important;
+  border-radius: 0 !important;
+  padding: 15px !important;
+}
+
+
+form input::placeholder {
+  color: rgba(0, 0, 0, 0.50);
+  font-size: 14px;
+  ;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 1.8px;
+  text-transform: capitalize;
+}
+
+.map {
+  margin-bottom: 100px;
+}
+
+/* Room Type CSS */
+
+.rooms .box .image {
+  height: 400px;
+}
+
+.rooms .box {
+  padding: 0 25px 70px 25px;
+}
+
+.rooms .box .btn1 {
+  margin: 0;
+  left: 0;
+  right: unset;
+  margin-top: 20px;
+}
+
+.rooms .box .image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.rooms .box .image .img{
+  height: 100%;
+}
+
+.rooms {
+  margin: 50px 0;
+}
+
+.rooms::after {
+  display: none;
+}
+
+.amenities .image img {
+  width: 90%;
+}
+
+/* Medis Queries */
+
+@media(max-width: 991px) {
+  .best_emi-main .row {
+    row-gap: 40px;
+  }
+}
+
+@media (min-width:575px) {
+  .title h2 {
+    font-size: 55px;
+    line-height: 1.2;
+  }
+
+  .contact-content {
+    padding: 50px;
+  }
+
+  .banner {
+    padding: 310px 0px 200px 0px;
+  }
+
+  .title {
+    row-gap: 10px;
+  }
+
+  .amenities .box {
+    flex-direction: row;
+    text-align: start;
+  }
+
+  .about .facts {
+    flex-direction: row;
+  }
+
+  .about .title h2 {
+    font-size: 42px;
+  }
+
+  .about .title p {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.72px;
+  }
+
+  .about .facts h3 {
+    font-size: 60px;
+  }
+
+  .facilities img {
+    height: 500px;
+  }
+
+  .blog .title h2 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width:1200px) {
+  .about .content {
+    padding-left: 30px;
+  }
+
+  .facilities img {
+    height: 800px;
+  }
+
+  .testimonial .content p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1600px) {
+  .facilities img {
+    height: 700px;
+  }
+
+  .facilities .content p {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .facilities .box:hover .content p {
+    padding-bottom: 55px;
+  }
+
+  .facilities .content {
+    bottom: 0px;
+    left: 65px;
+  }
+}
+
+
+#myCarousel {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#myCarousel .f-carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
